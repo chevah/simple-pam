@@ -132,7 +132,7 @@ PAM_EXTERN int pam_sm_authenticate( pam_handle_t *pamh, int flags, int argc, con
 		}
 	}
 
-	if (strcmp(pUsername, "test-user") != 0) {
+	if (strcmp(pUsername, "pam_user") != 0) {
 		return PAM_AUTH_ERR;
 	}
 
