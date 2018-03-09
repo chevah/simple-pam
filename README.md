@@ -13,6 +13,10 @@ To build, either use the build scripts or use these commands:
 
 The first command builds the object file in the current directory and the second links it with PAM. Since it's a shared library, PAM can use it on the fly without having to restart.
 
+On OS X / MacOS, linking works a bit differently. Use something along the lines of:
+
+`MACOSX_DEPLOYMENT_TARGET=10.8 ld -x -dylib -lpam -lSystem -o /tmp/pam_mypam.so mypam.o`
+
 **Build Test**
 
 `g++ -o pam_test src/test.c -lpam -lpam_misc`
