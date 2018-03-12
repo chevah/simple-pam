@@ -1,5 +1,9 @@
 #include <security/pam_appl.h>
+#if HAVE_SECURITY_PAM_MISC_H
 #include <security/pam_misc.h>
+#else
+#include <security/pam_modules.h>
+#endif
 #include <stdio.h>
 
 const struct pam_conv conv = {

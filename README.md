@@ -25,6 +25,10 @@ OR
 
 `gcc -o pam_test src/test.c -lpam -lpam_misc`
 
+On OS X / MacOS, use:
+
+`gcc -o pam_test src/test.c -lpam`
+
 The test program is valid C, so it could be compiled using gcc or g++. I like g++ better because I'll probably want to extend it and I like C++ better.
 
 The test program requires the service name and username as arguments.
